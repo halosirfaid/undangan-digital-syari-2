@@ -547,7 +547,7 @@ function mulaiPreloader(){setTimeout(()=>{const p=document.getElementById('prelo
 
 function aktifkanBukuAdab(){const book=document.getElementById('book-adab');if(!book)return;const pages=[...book.querySelectorAll('.book-page')];let current=0,startX=0,startY=0,drag=false;const buka=()=>{pages.forEach((p,i)=>{p.classList.toggle('flipped',i<current)})};const next=()=>{if(current<pages.length)current++;buka()};const prev=()=>{if(current>0)current--;buka()};book.addEventListener('touchstart',e=>{const t=e.changedTouches[0];startX=t.clientX;startY=t.clientY;drag=true},{passive:true});book.addEventListener('touchend',e=>{if(!drag)return;const t=e.changedTouches[0],dx=t.clientX-startX,dy=t.clientY-startY;drag=false;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){dx<0?next():prev()}},{passive:true});book.addEventListener('mousedown',e=>{startX=e.clientX;startY=e.clientY;drag=true});window.addEventListener('mouseup',e=>{if(!drag)return;const dx=e.clientX-startX,dy=e.clientY-startY;drag=false;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){dx<0?next():prev()}});book.addEventListener('click',e=>{if(Math.abs(e.clientX-book.getBoundingClientRect().left-book.offsetWidth/2)<10)return;const rect=book.getBoundingClientRect();e.clientX>rect.left+rect.width/2?next():prev()})}
 
-window.addEventListener('load',function(){aktifkanBukuAdab();isiDataUndangan();ambilNamaTamu();muatUcapan();scrollReveal();mulaiPreloader();mulaiCountdown();});
+window.addEventListener('load',function(){mulaiPreloader();try{aktifkanBukuAdab();isiDataUndangan();ambilNamaTamu();muatUcapan();scrollReveal();mulaiCountdown()}catch(e){console.error(e)}});
 </script>
 </body>
 </html>
