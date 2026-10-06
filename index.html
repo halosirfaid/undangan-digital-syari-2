@@ -138,1414 +138,381 @@ body{font-family:'Montserrat',sans-serif;scroll-behavior:smooth;overflow-x:hidde
 </div>
 </div>
   
-    <div id="music-btn" class="music-control hidden spinning" onclick="toggleMusik()"><i id="music-icon" class="fa-solid fa-music"></i></div>
 
-  <!-- =========================================
-     RADIAL MENU — SYAR'I DONUT
-========================================= -->
+<div id="music-btn" class="music-control hidden" onclick="toggleMusik()" aria-label="Musik"><i class="fa-solid fa-volume-high"></i></div>
 
-<div id="nav-menu"
-     class="nav-bottom hidden">
-
-    <!-- ORNAMEN MIHRAB -->
-    <div class="mihrab-top-ornament"></div>
-
-
-    <!-- RODA YANG BISA DIPUTAR -->
-
-    <div class="nav-wheel"
-         id="nav-wheel">
-
-
-        <!-- SALAM -->
-
-  <a href="#salam"
-   class="mihrab-nav-item"
-   style="--angle:0deg"          
-    aria-label="Salam">
-
-            <i class="fa-solid fa-heart"></i>
-
-        </a>
-
-
-        <!-- MEMPELAI -->
-
-        <a href="#mempelai"
-           class="mihrab-nav-item"
-           style="--angle:45deg"
-           aria-label="Mempelai">
-
-            <i class="fa-solid fa-user-group"></i>
-
-        </a>
-
-
-        <!-- PERJALANAN -->
-
-        <a href="#perjalanan"
-           class="mihrab-nav-item"
-           style="--angle:-90deg"
-           aria-label="Perjalanan">
-
-            <i class="fa-solid fa-book-open"></i>
-
-        </a>
-
-
-        <!-- ACARA -->
-
-        <a href="#acara"
-           class="mihrab-nav-item"
-           style="--angle:135deg"
-           aria-label="Acara">
-
-            <i class="fa-solid fa-mosque"></i>
-
-        </a>
-
-
-        <!-- LOKASI -->
-
-        <a href="#lokasi"
-           class="mihrab-nav-item"
-           style="--angle:180deg"
-           aria-label="Lokasi">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-        </a>
-
-
-        <!-- ADAB -->
-
-        <a href="#adab"
-           class="mihrab-nav-item"
-           style="--angle:225deg"
-           aria-label="Adab">
-
-            <i class="fa-solid fa-book-open"></i>
-
-        </a>
-
-
-        <!-- KADO -->
-
-        <a href="#kado"
-           class="mihrab-nav-item"
-           style="--angle:270deg"
-           aria-label="Kado">
-
-            <i class="fa-solid fa-gift"></i>
-
-        </a>
-
-
-        <!-- RSVP -->
-
-        <a href="#rsvp"
-           class="mihrab-nav-item"
-           style="--angle:315deg"
-           aria-label="Ucapan">
-
-            <i class="fa-solid fa-envelope"></i>
-
-        </a>
-
-    </div>
-
-
-    <!-- =================================
-         LUBANG DONAT
-         AUTO SCROLL
-    ================================= -->
-
-    <button
-        id="scroll-btn"
-        type="button"
-        aria-label="Auto Scroll"
-        onclick="toggleAutoScroll()">
-        <i id="scroll-icon"
-           class="fa-solid fa-pause"></i>
-
-    </button>
-
+<div id="nav-menu" class="nav-bottom hidden">
+<div class="mihrab-top-ornament"></div>
+<div class="nav-wheel" id="nav-wheel">
+<a href="#salam" class="mihrab-nav-item" style="--angle:0deg" aria-label="Salam"><i class="fa-solid fa-heart"></i></a>
+<a href="#mempelai" class="mihrab-nav-item" style="--angle:45deg" aria-label="Mempelai"><i class="fa-solid fa-user-group"></i></a>
+<a href="#perjalanan" class="mihrab-nav-item" style="--angle:-90deg" aria-label="Perjalanan"><i class="fa-solid fa-book-open"></i></a>
+<a href="#acara" class="mihrab-nav-item" style="--angle:135deg" aria-label="Acara"><i class="fa-solid fa-mosque"></i></a>
+<a href="#lokasi" class="mihrab-nav-item" style="--angle:180deg" aria-label="Lokasi"><i class="fa-solid fa-location-dot"></i></a>
+<a href="#adab" class="mihrab-nav-item" style="--angle:225deg" aria-label="Adab"><i class="fa-solid fa-book-open"></i></a>
+<a href="#kado" class="mihrab-nav-item" style="--angle:270deg" aria-label="Kado"><i class="fa-solid fa-gift"></i></a>
+<a href="#rsvp" class="mihrab-nav-item" style="--angle:315deg" aria-label="Ucapan"><i class="fa-solid fa-envelope"></i></a>
 </div>
-  
-    <div id="konten-utama">
-        <section id="salam"
-         class="salam-section islamic-section py-24 px-6 text-center">
-    <div class="max-w-md mx-auto reveal">
-
-        <!-- Ornamen -->
-        <div class="salam-ornament">
-            <span>✦</span>
-        </div>
-
-        <!-- Salam -->
-        <h2 class="salam-title mb-8">
-            Assalamu'alaikum<br>
-            Warahmatullahi Wabarakatuh
-        </h2>
-
-        <div class="salam-divider"></div>
-
-        <!-- Ayat -->
-        <div class="px-2 mb-8">
-
-            <p class="salam-ayat" dir="rtl">
-                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ
-                أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
-                إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً
-                وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ
-                لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
-            </p>
-
-        </div>
-
-        <!-- Terjemahan -->
-        <p class="salam-terjemahan italic mb-5">
-            "Dan di antara tanda-tanda (kebesaran)-Nya ialah
-            Dia menciptakan pasangan-pasangan untukmu dari
-            jenismu sendiri, agar kamu cenderung dan merasa
-            tenteram kepadanya, dan dijadikan-Nya di antaramu
-            rasa kasih dan sayang."
-        </p>
-
-        <p class="salam-referensi">
-            QS. AR-RUM : 21
-        </p>
-
-        <div class="salam-divider"></div>
-
-        <!-- Countdown -->
-        <div class="countdown-wrapper">
-
-            <p class="text-[9px] uppercase tracking-[0.3em] text-stone-400 mb-5">
-                Menuju Hari Bahagia
-            </p>
-
-            <div id="countdown"
-                 class="flex justify-center gap-2">
-
-                <div class="countdown-item">
-                    <span id="days">00</span>
-                    <p>Hari</p>
-                </div>
-
-                <div class="countdown-item">
-                    <span id="hours">00</span>
-                    <p>Jam</p>
-                </div>
-
-                <div class="countdown-item">
-                    <span id="minutes">00</span>
-                    <p>Menit</p>
-                </div>
-
-                <div class="countdown-item">
-                    <span id="seconds">00</span>
-                    <p>Detik</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-      
-<section id="mempelai"
-         class="mempelai-section py-24 px-6 text-center">
-
-    <div class="max-w-md mx-auto reveal">
-
-        <!-- Judul -->
-        <p class="mempelai-label">
-            Dengan Memohon Ridha Allah
-        </p>
-
-        <h2 class="mempelai-title mb-6">
-            Mempelai
-        </h2>
-
-        <!-- Ilustrasi -->
-        <div class="mempelai-illustration">
-
-            <img
-                src="undangansyari.png"
-                alt="Ilustrasi Pengantin">
-
-        </div>
-
-
-        <!-- MEMPELAI PRIA -->
-        <div class="mempelai-card reveal">
-
-            <p class="mempelai-label">
-                Mempelai Pria
-            </p>
-
-            <h3 id="nama-pria"
-                class="mempelai-name">
-            </h3>
-
-            <p id="ortu-pria"
-               class="mempelai-parents">
-            </p>
-
-            <a id="ig-link-pria"
-               href="#"
-               target="_blank"
-               class="mempelai-instagram">
-
-                <i class="fa-brands fa-instagram"></i>
-
-                <span id="ig-pria"></span>
-
-            </a>
-
-        </div>
-
-
-        <!-- PEMISAH -->
-        <div class="mempelai-divider"></div>
-
-        <div class="mempelai-divider-symbol">
-            ✦
-        </div>
-
-
-        <!-- MEMPELAI WANITA -->
-        <div class="mempelai-card reveal">
-
-            <p class="mempelai-label">
-                Mempelai Wanita
-            </p>
-
-            <h3 id="nama-wanita"
-                class="mempelai-name">
-            </h3>
-
-            <p id="ortu-wanita"
-               class="mempelai-parents">
-            </p>
-
-            <a id="ig-link-wanita"
-               href="#"
-               target="_blank"
-               class="mempelai-instagram">
-
-                <i class="fa-brands fa-instagram"></i>
-
-                <span id="ig-wanita"></span>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-      
-  <section id="perjalanan" class="perjalanan-section py-24 px-6">
-
-    <div class="max-w-md mx-auto text-center reveal">
-
-        <p class="perjalanan-label">
-            MENUJU SEBUAH IKATAN
-        </p>
-
-        <h2 class="perjalanan-title">
-            Sebuah Perjalanan
-        </h2>
-
-        <div class="perjalanan-divider">
-            ✦
-        </div>
-
-        <p class="perjalanan-opening">
-            Setiap perjalanan memiliki awal yang telah Allah tetapkan.
-            Setiap pertemuan terjadi atas izin-Nya, dan setiap langkah
-            membawa kita menuju takdir yang telah dituliskan.
-        </p>
-
-    </div>
-
-
-    <!-- PERJALANAN 1 -->
-
-    <div class="perjalanan-item reveal">
-
-        <div class="perjalanan-number">
-            01
-        </div>
-
-        <div class="perjalanan-content">
-
-            <p class="perjalanan-small">
-                SEBUAH PERTEMUAN
-            </p>
-
-            <h3>
-                Dipertemukan dalam kebaikan
-            </h3>
-
-            <p>
-                Dua insan dipertemukan dalam sebuah perjalanan kehidupan.
-                Dari sebuah perkenalan sederhana, tumbuh niat untuk saling
-                mengenal dalam kebaikan.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- PERJALANAN 2 -->
-
-    <div class="perjalanan-item reveal">
-
-        <div class="perjalanan-number">
-            02
-        </div>
-
-        <div class="perjalanan-content">
-
-            <p class="perjalanan-small">
-                SEBUAH IKHTIAR
-            </p>
-
-            <h3>
-                Melangkah dengan doa
-            </h3>
-
-            <p>
-                Dengan melibatkan keluarga dan memohon petunjuk-Nya,
-                langkah demi langkah ditempuh dengan niat menuju sebuah
-                ikatan yang diridhai Allah.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- PERJALANAN 3 -->
-
-    <div class="perjalanan-item reveal">
-
-        <div class="perjalanan-number">
-            03
-        </div>
-
-        <div class="perjalanan-content">
-
-            <p class="perjalanan-small">
-                SEBUAH AMANAH
-            </p>
-
-            <h3>
-                Menuju sebuah ibadah
-            </h3>
-
-            <p>
-                Kini, dengan mengucapkan bismillah, keduanya memantapkan
-                hati untuk menapaki kehidupan bersama dalam sebuah
-                pernikahan.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- PENUTUP -->
-
-    <div class="perjalanan-ending reveal">
-
-        <div class="perjalanan-ending-line"></div>
-
-        <p>
-            بِسْمِ اللَّهِ
-        </p>
-
-        <span>
-            Kami melangkah menuju sebuah ibadah.
-        </span>
-
-        <div class="perjalanan-ending-line"></div>
-
-    </div>
-
-</section>
-
-      
-         <section id="acara"
-         class="acara-section py-24 px-6 text-center">
-
-    <div class="max-w-md mx-auto reveal">
-
-        <!-- JUDUL -->
-
-        <p class="acara-label">
-            DENGAN MEMOHON RIDHA ALLAH
-        </p>
-
-        <h2 class="acara-title">
-            Akad & Walimah
-        </h2>
-
-        <p class="acara-opening">
-            Dengan penuh rasa syukur, kami mengundang
-            Bapak/Ibu/Saudara/i untuk hadir dan memberikan
-            doa restu pada hari yang telah Allah tetapkan.
-        </p>
-
-
-        <!-- TANGGAL UTAMA -->
-
-        <div class="acara-date">
-
-            <p id="hari-acara"
-               class="acara-date-day">
-            </p>
-
-            <p id="tanggal-acara"
-               class="acara-date-number">
-            </p>
-
-            <div class="acara-date-line"></div>
-
-            <p class="text-[8px] tracking-[0.2em] text-stone-400 uppercase">
-                Semoga menjadi awal yang penuh keberkahan
-            </p>
-
-        </div>
-
-
-        <!-- =================================
-             TIMELINE
-        ================================= -->
-
-        <div class="acara-timeline">
-
-
-            <!-- AKAD -->
-
-            <div class="acara-item reveal">
-
-                <div class="acara-content">
-
-                    <p class="acara-content-label">
-                        Pernikahan
-                    </p>
-
-                    <h3 class="acara-content-title">
-                        Akad Nikah
-                    </h3>
-
-                    <p id="akad-hari"
-                       class="acara-content-day">
-                    </p>
-
-                    <p id="akad-tanggal"
-                       class="acara-content-date">
-                    </p>
-
-                    <p id="akad-jam"
-                       class="acara-content-time">
-                    </p>
-
-                    <p id="akad-tempat"
-                       class="acara-content-place">
-                    </p>
-
-                    <a id="akad-maps"
-                       href="#"
-                       target="_blank"
-                       class="acara-map-button">
-
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        PETUNJUK LOKASI
-
-                    </a>
-
-                </div>
-
-
-                <div class="acara-dot">
-                    ✦
-                </div>
-
-            </div>
-
-
-            <!-- WALIMAH -->
-
-            <div class="acara-item reveal">
-
-                <div class="acara-content">
-
-                    <p class="acara-content-label">
-                        Syukuran
-                    </p>
-
-                    <h3 class="acara-content-title">
-                        Walimah
-                    </h3>
-
-                    <p id="resepsi-hari"
-                       class="acara-content-day">
-                    </p>
-
-                    <p id="resepsi-tanggal"
-                       class="acara-content-date">
-                    </p>
-
-                    <p id="resepsi-jam"
-                       class="acara-content-time">
-                    </p>
-
-                    <p id="resepsi-tempat"
-                       class="acara-content-place">
-                    </p>
-
-                    <a id="resepsi-maps"
-                       href="#"
-                       target="_blank"
-                       class="acara-map-button">
-
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        PETUNJUK LOKASI
-
-                    </a>
-
-                </div>
-
-
-                <div class="acara-dot">
-                    ❋
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================
-             KALENDER
-        ================================= -->
-
-        <div class="kalender-area reveal">
-
-            <p class="kalender-caption">
-                Tandai tanggalnya
-            </p>
-
-           <a
-    id="kalender-button"
-    href="#"
-    target="_blank"
-    class="kalender-button">
-
-    <i class="fa-solid fa-calendar-check"></i>
-
-    SIMPAN KE KALENDER
-
-</a>
-
-        </div>
-
-    </div>
-
-</section>   
-
-      
-        <section id="lokasi"
-         class="maps-section py-24 px-6 text-center">
-
-    <div class="maps-inner max-w-md mx-auto reveal">
-
-        <p class="maps-label">
-            TEMPAT DISELENGGARAKANNYA ACARA
-        </p>
-
-        <h2 class="maps-title">
-            Lokasi
-        </h2>
-
-        <p class="maps-subtitle">
-            InsyaAllah kami menantikan kehadiran
-            Bapak/Ibu/Saudara/i untuk bersama-sama
-            menjadi saksi dan memberikan doa restu.
-        </p>
-
-
-        <!-- PETA -->
-
-        <div class="maps-frame-wrap">
-
-            <iframe
-                id="maps-frame"
-                class="maps-frame"
-                src=""
-                loading="lazy"
-                allowfullscreen>
-            </iframe>
-
-        </div>
-
-
-        <!-- ALAMAT -->
-
-        <div class="maps-address">
-
-            <div class="maps-address-icon">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-
-            <span id="maps-address-text">
-                Tempat acara
-            </span>
-
-        </div>
-
-
-        <!-- TOMBOL -->
-
-        <a
-            id="maps-button"
-            href="#"
-            target="_blank"
-            class="maps-button">
-
-            <i class="fa-solid fa-diamond-turn-right"></i>
-
-            BUKA PETUNJUK JALAN
-
-        </a>
-
-    </div>
-
-</section>  
- 
-<!-- =========================================
-     BUKU ADAB WALIMAH
-========================================= -->
-
-<section id="adab"
-         class="buku-adab-section py-24 px-6 text-center">
-
-    <div class="buku-adab-inner max-w-md mx-auto reveal">
-
-        <p class="buku-adab-label">
-            SEBUAH CATATAN KECIL
-        </p>
-
-        <h2 class="buku-adab-heading">
-            Adab Walimah
-        </h2>
-
-        <!-- BUKU -->
-
-        <div class="book-wrapper"
-             id="adab-book">
-
-            <div class="book-shadow"></div>
-
-            <div class="book"
-                 id="adab-book-pages">
-
-
-                <!-- =========================
-                     HALAMAN 1 — SAMPUL
-                ========================== -->
-
-                <div class="book-page book-cover"
-                     data-page="0">
-
-                    <div class="book-cover-inner">
-
-                        <div class="book-cover-arabic">
-                            آدَابُ الْوَلِيمَةِ
-                        </div>
-
-                        <div class="book-cover-symbol">
-                            ✦
-                        </div>
-
-                        <h3 class="book-cover-title">
-                            Adab Menghadiri<br>
-                            Walimah
-                        </h3>
-
-                        <div class="book-cover-line"></div>
-
-                        <p class="book-cover-subtitle">
-                            Bekal Kecil Menuju<br>
-                            Sebuah Kebaikan
-                        </p>
-
-                        <div class="book-cover-symbol">
-                            ✦
-                        </div>
-
-                    </div>
-
-                    <span class="book-page-number">
-                        بِسْمِ اللَّهِ
-                    </span>
-
-                </div>
-
-
-                <!-- =========================
-                     HALAMAN 2
-                ========================== -->
-
-                <div class="book-page"
-                     data-page="1">
-
-                    <div class="book-content">
-
-                        <div class="book-icon">
-                            <i class="fa-solid fa-compass"></i>
-                        </div>
-
-                        <p class="book-small">
-                            Adab Pertama
-                        </p>
-
-                        <h3 class="book-title">
-                            Meluruskan Niat
-                        </h3>
-
-                        <p class="book-text">
-                            Menghadiri walimah dengan niat
-                            memenuhi undangan, menjaga
-                            silaturahmi, dan turut mendoakan
-                            keberkahan bagi kedua mempelai.
-                        </p>
-
-                    </div>
-
-                    <span class="book-page-number">
-                        01
-                    </span>
-
-                </div>
-
-
-                <!-- =========================
-                     HALAMAN 3
-                ========================== -->
-
-                <div class="book-page"
-                     data-page="2">
-
-                    <div class="book-content">
-
-                        <div class="book-icon">
-                            <i class="fa-solid fa-leaf"></i>
-                        </div>
-
-                        <p class="book-small">
-                            Adab Kedua
-                        </p>
-
-                        <h3 class="book-title">
-                            Berpakaian dengan Sopan
-                        </h3>
-
-                        <p class="book-text">
-                            Mengenakan pakaian yang bersih,
-                            rapi, dan sesuai dengan adab
-                            serta ketentuan syariat.
-                        </p>
-
-                    </div>
-
-                    <span class="book-page-number">
-                        02
-                    </span>
-
-                </div>
-
-
-                <!-- =========================
-                     HALAMAN 4
-                ========================== -->
-
-                <div class="book-page"
-                     data-page="3">
-
-                    <div class="book-content">
-
-                       <div class="book-icon">
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-
-
-                        <p class="book-small">
-                            Adab Ketiga
-                        </p>
-
-                        <h3 class="book-title">
-                            Menjaga Pandangan
-                        </h3>
-
-                        <p class="book-text">
-                            Menjaga pandangan, ucapan,
-                            dan perilaku selama berada
-                            di tempat berlangsungnya acara.
-                        </p>
-
-                    </div>
-
-                    <span class="book-page-number">
-                        03
-                    </span>
-
-                </div>
-
-
-                <!-- =========================
-                     HALAMAN 5
-                ========================== -->
-
-                <div class="book-page"
-                     data-page="4">
-
-                    <div class="book-content">
-
-                        <div class="book-icon">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-
-                        <p class="book-small">
-                            Adab Keempat
-                        </p>
-
-                        <h3 class="book-title">
-                            Mendoakan Kedua Mempelai
-                        </h3>
-
-                        <p class="book-text">
-                            Semoga Allah memberikan
-                            keberkahan, menyatukan keduanya
-                            dalam kebaikan, serta menjadikan
-                            rumah tangganya penuh sakinah,
-                            mawaddah, dan rahmah.
-                        </p>
-
-                    </div>
-
-                    <span class="book-page-number">
-                        04
-                    </span>
-
-                </div>
-
-
-                <!-- =========================
-                     HALAMAN 6 — PENUTUP
-                ========================== -->
-
-                <div class="book-page"
-                     data-page="5">
-
-                    <div class="book-content">
-
-                        <div class="book-icon">
-                            <i class="fa-solid fa-dove"></i>
-                        </div>
-
-                        <p class="book-small">
-                            Sebuah Doa
-                        </p>
-
-                        <p class="book-closing-arabic">
-                            بَارَكَ اللَّهُ لَكُمَا
-                        </p>
-
-                        <p class="book-closing">
-                            Semoga Allah memberkahi
-                            pernikahan ini dan menjadikannya
-                            jalan menuju kebaikan serta
-                            keberkahan.
-                        </p>
-
-                    </div>
-
-                    <span class="book-page-number">
-                        05
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <p class="book-hint"
-           id="book-hint">
-            Geser buku untuk membuka
-        </p>
-
-    </div>
-
-</section>
-
-   
-    <!-- =========================
-     HALAMAN TERAKHIR — TANDA KASIH
-========================= -->
-
-<section id="kado" class="halaman-amanah py-24 px-6">
-
-    <div class="amanah-book-page max-w-md mx-auto reveal">
-
-        <!-- Nomor halaman -->
-        <p class="amanah-page-label">
-            HALAMAN TERAKHIR
-        </p>
-
-        <!-- Judul -->
-        <h2 class="amanah-page-title">
-            Tanda Kasih
-        </h2>
-
-        <div class="amanah-page-symbol">
-            ✦
-        </div>
-
-        <!-- Pembuka -->
-        <p class="amanah-letter">
-            Dengan penuh rasa syukur, kami menerima
-            tanda kasih dari Bapak/Ibu/Saudara/i
-            sebagai doa dan dukungan bagi perjalanan
-            kehidupan kami.
-        </p>
-
-
-        <!-- =====================
-             MANDIRI
-        ====================== -->
-        <div class="amanah-entry">
-
-    <p class="amanah-entry-label">
-        BANK MANDIRI
-    </p>
-
-    <p id="rek-mandiri"
-       class="amanah-entry-number">
-    </p>
-
-    <p id="mandiri-an"
-       class="amanah-entry-name">
-    </p>
-
-    <button
-        onclick="salinTeks(dataMempelai.kado.mandiriNo, 'Mandiri', this)"
-        class="amanah-salin">
-
-        <i class="fa-regular fa-copy"></i>
-        Salin Nomor
-
-    </button>
-
+<button id="scroll-btn" type="button" aria-label="Auto Scroll" onclick="toggleAutoScroll()"><i id="scroll-icon" class="fa-solid fa-pause"></i></button>
 </div>
 
+<div id="konten-utama">
 
-        <!-- =====================
-             BCA
-        ====================== -->
-        <div class="amanah-entry">
-
-    <p class="amanah-entry-label">
-        BANK BCA
-    </p>
-
-    <p id="rek-bca"
-       class="amanah-entry-number">
-    </p>
-
-    <p id="bca-an"
-       class="amanah-entry-name">
-    </p>
-
-    <button
-        onclick="salinTeks(dataMempelai.kado.bcaNo, 'BCA', this)"
-        class="amanah-salin">
-
-        <i class="fa-regular fa-copy"></i>
-        Salin Nomor
-
-    </button>
-
+<section id="salam" class="salam-section min-h-screen flex items-center justify-center px-6 py-24 text-center">
+<div class="max-w-xl w-full reveal">
+<div class="salam-ornament"><span>✦</span></div>
+<p class="text-[8px] tracking-[0.35em] uppercase text-stone-400 mb-3">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+<h2 class="salam-title mb-6">Dengan Memohon Rahmat & Ridha Allah SWT</h2>
+<div class="salam-divider"></div>
+<div class="salam-ayat mb-5">وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</div>
+<p class="salam-terjemahan max-w-md mx-auto">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan-pasangan dari jenismu sendiri, supaya kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.”</p>
+<p class="salam-referensi mt-4">QS. AR-RUM : 21</p>
+<div class="salam-divider"></div>
+<p class="text-[10px] leading-7 text-stone-500 max-w-sm mx-auto">Dengan segala kerendahan hati, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada hari bahagia kami.</p>
+<div class="countdown-wrapper flex justify-center gap-3 mt-8">
+<div class="countdown-item"><span id="days">0</span><p>Hari</p></div>
+<div class="countdown-item"><span id="hours">00</span><p>Jam</p></div>
+<div class="countdown-item"><span id="minutes">00</span><p>Menit</p></div>
+<div class="countdown-item"><span id="seconds">00</span><p>Detik</p></div>
 </div>
-      
-
-        <!-- =====================
-             DANA
-        ====================== -->
-        <div class="amanah-entry">
-
-    <p class="amanah-entry-label">
-        DANA
-    </p>
-
-    <p id="rek-dana"
-       class="amanah-entry-number">
-    </p>
-
-    <p id="dana-an"
-       class="amanah-entry-name">
-    </p>
-
-    <button
-        onclick="salinTeks(dataMempelai.kado.danaNo, 'DANA', this)"
-        class="amanah-salin">
-
-        <i class="fa-regular fa-copy"></i>
-        Salin Nomor
-
-    </button>
-
 </div>
-       
-
-        <!-- =====================
-             KADO FISIK
-        ====================== -->
-        <div class="amanah-package">
-
-    <div class="amanah-package-symbol">
-        ❋
-    </div>
-
-    <p class="amanah-entry-label">
-        KADO FISIK
-    </p>
-
-    <p id="alamat-kado"
-       class="amanah-package-address">
-    </p>
-
-    <p id="penerima-kado"
-       class="amanah-package-recipient">
-    </p>
-
-    <button
-        onclick="salinTeks(dataMempelai.kado.alamatKirim, 'Alamat', this)"
-        class="amanah-salin">
-
-        <i class="fa-regular fa-copy"></i>
-        Salin Alamat
-
-    </button>
-
-</div>
-        
-
-        <!-- =====================
-             PENUTUP
-        ====================== -->
-
-        <div class="amanah-closing">
-
-            <div class="amanah-closing-line"></div>
-
-            <p class="amanah-closing-arabic">
-                جَزَاكُمُ اللَّهُ خَيْرًا
-            </p>
-
-            <p class="amanah-closing-text">
-                Semoga Allah membalas setiap
-                kebaikan dengan keberkahan.
-            </p>
-
-            <div class="amanah-closing-line"></div>
-
-        </div>
-
-
-        <!-- =====================
-             WHATSAPP
-        ====================== -->
-
-        <div class="amanah-confirm">
-
-            <p>
-                SUDAH MENGIRIMKAN TANDA KASIH?
-            </p>
-
-            <a
-                id="wa-konfirmasi"
-                href="#"
-                target="_blank"
-                class="amanah-wa">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-                KONFIRMASI VIA WHATSAPP
-
-            </a>
-
-        </div>
-
-
-        <!-- ornamen bawah -->
-
-        <div class="amanah-bottom-ornament">
-            ✦
-        </div>
-
-    </div>
-
 </section>
-     <!-- =========================
-     HALAMAN DOA & UCAPAN
-========================= -->
 
-<section id="rsvp" class="halaman-doa py-24 px-6">
+<div class="section-divider soft"></div>
 
-    <div class="doa-inner max-w-md mx-auto reveal">
+<section id="mempelai" class="mempelai-section px-6 py-24 text-center">
+<div class="max-w-xl mx-auto reveal">
+<p class="mempelai-label">Mempelai</p>
+<h2 class="mempelai-title">Dua Insan Dalam Satu Janji</h2>
+<div class="mempelai-illustration"><img src="undangansyari.png" alt="Ilustrasi pernikahan"></div>
 
-        <p class="doa-label">
-            SEBUAH DOA
-        </p>
+<div class="mempelai-pria">
+<p class="mempelai-label">Mempelai Pria</p>
+<h3 id="nama-pria" class="mempelai-name"></h3>
+<p id="ortu-pria" class="mempelai-parents"></p>
+<a id="ig-pria" href="#" target="_blank" class="mempelai-instagram"><i class="fa-brands fa-instagram"></i><span></span></a>
+</div>
 
-        <h2 class="doa-title">
-            Doa & Ucapan
-        </h2>
+<div class="mempelai-divider"><span></span></div>
+<div class="mempelai-divider-symbol">✦</div>
 
-        <div class="doa-symbol">
-            ✦
-        </div>
+<div class="mempelai-wanita">
+<p class="mempelai-label">Mempelai Wanita</p>
+<h3 id="nama-wanita" class="mempelai-name"></h3>
+<p id="ortu-wanita" class="mempelai-parents"></p>
+<a id="ig-wanita" href="#" target="_blank" class="mempelai-instagram"><i class="fa-brands fa-instagram"></i><span></span></a>
+</div>
+</div>
+</section>
 
-        <p class="doa-opening">
-            Kehadiran dan doa dari keluarga,
-            sahabat, serta orang-orang terkasih
-            adalah kebahagiaan bagi kami.
-        </p>
+<div class="section-divider soft"></div>
 
+<section id="perjalanan" class="perjalanan-section px-6 py-24 text-center">
+<div class="max-w-xl mx-auto reveal">
+<p class="perjalanan-label">Catatan Perjalanan</p>
+<h2 class="perjalanan-title">Menuju Sebuah Janji</h2>
+<div class="perjalanan-divider">✦</div>
+<p class="perjalanan-opening max-w-sm mx-auto">“Tidak ada kisah yang lebih indah selain kisah yang membawa dua hati menuju ridha Allah.”</p>
 
-        <!-- =====================
-             FORM
-        ====================== -->
+<div class="perjalanan-item">
+<div class="perjalanan-number">01</div>
+<div class="perjalanan-content">
+<p class="perjalanan-small" id="story-tanggal-1">JANUARI 2023</p>
+<h3>Pertemuan</h3>
+<p id="story-pesan-1">Ingat nggak waktu pertama kali kita nggak sengaja duduk sebelahan di cafe? 🥰</p>
+</div>
+</div>
 
-        <div class="doa-form">
+<div class="perjalanan-item">
+<div class="perjalanan-number">02</div>
+<div class="perjalanan-content">
+<p class="perjalanan-small" id="story-tanggal-2">JANUARI 2024</p>
+<h3>Keyakinan</h3>
+<p id="story-pesan-2">Ingat banget lah! Waktu itu aku gugup mau ajak kenalan. Akhirnya berani juga ya. ❤️</p>
+</div>
+</div>
 
-            <input
-                type="text"
-                id="nama-input"
-                placeholder="Nama Anda"
-                autocomplete="name"
-                class="doa-input">
+<div class="perjalanan-item">
+<div class="perjalanan-number">03</div>
+<div class="perjalanan-content">
+<p class="perjalanan-small" id="story-tanggal-3">FEBRUARI 2026</p>
+<h3>Menuju Pernikahan</h3>
+<p id="story-pesan-3">Momen paling haru ketika keluarga kita berkumpul. Sebuah langkah menuju kehidupan baru.</p>
+</div>
+</div>
 
-            <textarea
-                id="pesan-input"
-                placeholder="Tuliskan doa dan ucapan..."
-                class="doa-textarea"></textarea>
+<div class="perjalanan-ending">
+<div class="perjalanan-ending-line"></div>
+<p>بَارَكَ اللَّهُ لَكُمَا</p>
+<span>Semoga Allah memberkahi kalian berdua</span>
+</div>
+</div>
+</section>
 
+<div class="section-divider soft"></div>
 
-            <select
-                id="hadir-input"
-                class="doa-select">
+<section id="acara" class="acara-section px-6 py-24 text-center">
+<div class="max-w-xl mx-auto reveal">
+<p class="acara-label">Waktu & Tempat</p>
+<h2 class="acara-title">Rangkaian Acara</h2>
+<p class="acara-opening">Dengan memohon ridha Allah SWT, kami bermaksud menyelenggarakan rangkaian acara pernikahan sebagai berikut.</p>
 
-                <option value="Insya Allah Hadir">
-                    InsyaAllah saya akan hadir
-                </option>
+<div class="acara-date">
+<p class="acara-date-day">Hari Pernikahan</p>
+<p id="tanggal-acara" class="acara-date-number">25</p>
+<div class="acara-date-line"></div>
+<p id="bulan-acara" class="text-[10px] tracking-[0.25em] text-stone-500 uppercase">JULI 2026</p>
+</div>
 
-                <option value="Belum Bisa Hadir">
-                    Mohon maaf, saya belum dapat hadir
-                </option>
+<div class="acara-timeline">
+<div class="acara-item">
+<div class="acara-content">
+<p class="acara-content-label">Akad Nikah</p>
+<h3 id="akad-hari" class="acara-content-title">Kamis</h3>
+<p id="akad-tanggal" class="acara-content-date">23 Juli 2026</p>
+<p id="akad-jam" class="acara-content-time">09.00 - 12.00 WITA</p>
+<p id="akad-tempat" class="acara-content-place">Desa Tabunganen, Kapuas Kuala</p>
+<a id="akad-maps" href="#" target="_blank" class="acara-map-button"><i class="fa-solid fa-location-arrow"></i> Lihat Lokasi</a>
+</div>
+<div class="acara-dot"><i class="fa-solid fa-ring"></i></div>
+</div>
 
-            </select>
+<div class="acara-item">
+<div class="acara-content">
+<p class="acara-content-label">Walimah</p>
+<h3 id="resepsi-hari" class="acara-content-title">Sabtu</h3>
+<p id="resepsi-tanggal" class="acara-content-date">25 Juli 2026</p>
+<p id="resepsi-jam" class="acara-content-time">07.00 - Selesai</p>
+<p id="resepsi-tempat" class="acara-content-place">Gedung Khusus Pejabat, Kapuas Kuala</p>
+<a id="resepsi-maps" href="#" target="_blank" class="acara-map-button"><i class="fa-solid fa-location-arrow"></i> Lihat Lokasi</a>
+</div>
+<div class="acara-dot"><i class="fa-solid fa-mosque"></i></div>
+</div>
+</div>
 
+<div class="kalender-area">
+<p class="kalender-caption">Jangan sampai terlewat</p>
+<a id="google-calendar" href="#" target="_blank" class="kalender-button"><i class="fa-regular fa-calendar-plus"></i> Simpan ke Kalender</a>
+</div>
+</div>
+</section>
 
-            <button
-                onclick="kirimKeSheets()"
-                id="btn-kirim"
-                class="doa-submit">
+<div class="section-divider soft"></div>
 
-                <i class="fa-regular fa-paper-plane"></i>
+<section id="lokasi" class="maps-section px-6 py-24 text-center">
+<div class="maps-inner max-w-xl mx-auto reveal">
+<p class="maps-label">Petunjuk Lokasi</p>
+<h2 class="maps-title">Tempat Acara</h2>
+<p class="maps-subtitle">Semoga Allah memudahkan langkah kita untuk hadir dan menyaksikan momen penuh keberkahan ini.</p>
 
-                KIRIM DOA
+<div class="maps-frame-wrap">
+<iframe id="maps-iframe" class="maps-frame" src="" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
-            </button>
+<div class="maps-address-icon"><i class="fa-solid fa-location-dot"></i></div>
+<p id="maps-alamat" class="maps-address">Desa Tabunganen, Kapuas Kuala</p>
+<a id="maps-rute" href="#" target="_blank" class="maps-button"><i class="fa-solid fa-route"></i> BUKA PETUNJUK ARAH</a>
+</div>
+</section>
 
-        </div>
+<div class="section-divider soft"></div>
 
+<section id="adab" class="buku-adab-section px-6 py-24 text-center">
+<div class="buku-adab-inner max-w-xl mx-auto reveal">
+<p class="buku-adab-label">Adab Menghadiri Walimah</p>
+<h2 class="buku-adab-heading">Sebuah Pengingat</h2>
+<p class="text-[10px] leading-7 text-stone-500 max-w-sm mx-auto mt-3">Mari menjaga adab dan menghadirkan keberkahan dalam setiap langkah.</p>
 
-        <!-- =====================
-             PEMBATAS
-        ====================== -->
+<div class="book-wrapper">
+<div class="book-shadow"></div>
+<div class="book" id="book-adab">
 
-        <div class="doa-divider">
-            <span>✦</span>
-        </div>
+<div class="book-page book-cover" style="z-index:6">
+<div class="book-cover-inner">
+<div class="book-cover-arabic">آدَابُ الْعُرْسِ</div>
+<div class="book-cover-title">Adab Menghadiri<br>Walimah</div>
+<div class="book-cover-line"></div>
+<div class="book-cover-subtitle">Menjaga kehormatan<br>dan keberkahan</div>
+<div class="book-cover-line"></div>
+<div class="book-cover-symbol">✦</div>
+</div>
+</div>
 
+<div class="book-page" style="z-index:5">
+<div class="book-content">
+<div class="book-icon"><i class="fa-solid fa-hands-praying"></i></div>
+<p class="book-small">Adab Pertama</p>
+<h3 class="book-title">Niatkan Karena Allah</h3>
+<p class="book-text">Hadir ke walimah dengan niat memenuhi undangan, menyambung silaturahmi, dan mendoakan kedua mempelai.</p>
+</div>
+<p class="book-page-number">١</p>
+</div>
 
-        <!-- =====================
-             DAFTAR UCAPAN
-        ====================== -->
+<div class="book-page" style="z-index:4">
+<div class="book-content">
+<div class="book-icon"><i class="fa-solid fa-shirt"></i></div>
+<p class="book-small">Adab Kedua</p>
+<h3 class="book-title">Berpakaian Sopan</h3>
+<p class="book-text">Kenakan pakaian yang menutup aurat, bersih, rapi, dan sesuai dengan tuntunan syariat.</p>
+</div>
+<p class="book-page-number">٢</p>
+</div>
 
-        <div class="doa-list-area">
+<div class="book-page" style="z-index:3">
+<div class="book-content">
+<div class="book-icon"><i class="fa-solid fa-comment-dots"></i></div>
+<p class="book-small">Adab Ketiga</p>
+<h3 class="book-title">Menjaga Lisan</h3>
+<p class="book-text">Hindari perkataan yang menyakiti, candaan berlebihan, ghibah, dan hal-hal yang dapat mengurangi keberkahan acara.</p>
+</div>
+<p class="book-page-number">٣</p>
+</div>
 
-            <p class="doa-list-label">
-                DOA DARI KELUARGA & SAHABAT
-            </p>
-            <p id="jumlah-ucapan" class="jumlah-ucapan">
-    0 orang telah menyampaikan doa
-</p>
+<div class="book-page" style="z-index:2">
+<div class="book-content">
+<div class="book-icon"><i class="fa-solid fa-heart"></i></div>
+<p class="book-small">Adab Keempat</p>
+<h3 class="book-title">Mendoakan Mempelai</h3>
+<p class="book-text">Berikan doa terbaik agar Allah memberikan keberkahan, ketenteraman, dan keturunan yang saleh kepada keduanya.</p>
+</div>
+<p class="book-page-number">٤</p>
+</div>
 
-            <div
-                id="daftar-ucapan"
-                class="doa-list">
+<div class="book-page" style="z-index:1">
+<div class="book-content">
+<div class="book-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+<p class="book-small">Doa Untuk Mempelai</p>
+<h3 class="book-title">بارك الله لكما</h3>
+<p class="book-text">“Semoga Allah memberkahi kalian berdua, melimpahkan keberkahan kepada kalian dan mengumpulkan kalian dalam kebaikan.”</p>
+</div>
+<p class="book-page-number">٥</p>
+</div>
+</div>
+</div>
 
-            </div>
+<p class="book-hint"><i class="fa-solid fa-hand-pointer"></i> Geser untuk membuka</p>
+<div class="book-closing">
+<p class="book-closing-arabic">جَزَاكُمُ اللَّهُ خَيْرًا</p>
+<p>Terima kasih telah menjaga adab dalam menghadiri walimah kami.</p>
+</div>
+</div>
+</section>
 
-        </div>
+<div class="section-divider soft"></div>
 
+<section id="kado" class="halaman-amanah px-6 py-24 text-center">
+<div class="amanah-book-page max-w-xl mx-auto reveal">
+<p class="amanah-page-label">Tanda Kasih</p>
+<h2 class="amanah-page-title">Hadiah Pernikahan</h2>
+<div class="amanah-page-symbol">✦</div>
+<p class="amanah-letter">Doa dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun apabila berkenan memberikan tanda kasih, dapat melalui informasi berikut.</p>
 
-        <!-- =====================
-             PENUTUP
-        ====================== -->
+<div class="amanah-entry">
+<p class="amanah-entry-label">BANK MANDIRI</p>
+<p id="mandiri-no" class="amanah-entry-number">9876 5432 1234</p>
+<p id="mandiri-an" class="amanah-entry-name">Izah</p>
+<button onclick="salinTeks('mandiri-no','BANK MANDIRI',this)" class="amanah-salin"><i class="fa-regular fa-copy"></i> Salin Nomor</button>
+</div>
 
-        <div class="doa-ending">
+<div class="amanah-entry">
+<p class="amanah-entry-label">BANK BCA</p>
+<p id="bca-no" class="amanah-entry-number">1234 56788 9101</p>
+<p id="bca-an" class="amanah-entry-name">Hafizh</p>
+<button onclick="salinTeks('bca-no','BANK BCA',this)" class="amanah-salin"><i class="fa-regular fa-copy"></i> Salin Nomor</button>
+</div>
 
-            <p class="doa-ending-arabic">
-                بَارَكَ اللَّهُ لَنَا وَلَكُمْ
-            </p>
+<div class="amanah-entry">
+<p class="amanah-entry-label">DANA</p>
+<p id="dana-no" class="amanah-entry-number">08123456789</p>
+<p id="dana-an" class="amanah-entry-name">Hafizh</p>
+<button onclick="salinTeks('dana-no','DANA',this)" class="amanah-salin"><i class="fa-regular fa-copy"></i> Salin Nomor</button>
+</div>
 
-            <p>
-                Semoga Allah memberkahi
-                langkah kita semua.
-            </p>
+<div class="amanah-package">
+<div class="amanah-package-symbol"><i class="fa-solid fa-box-open"></i></div>
+<p class="amanah-entry-label">KIRIM HADIAH</p>
+<p id="alamat-kirim" class="amanah-package-address">Jl. Pulau Kalimantan No. 000, Kapuas Kuala</p>
+<p id="penerima-paket" class="amanah-package-recipient">Penerima: Hafiz & Hafizah</p>
+</div>
 
-            <span>
-                آمِيْن
-            </span>
+<div class="amanah-closing">
+<div class="amanah-closing-line"></div>
+<p class="amanah-closing-arabic">جَزَاكُمُ اللَّهُ خَيْرًا</p>
+<p class="amanah-closing-text">Semoga Allah membalas segala kebaikan dan ketulusan Anda dengan keberkahan yang berlipat.</p>
+</div>
 
-        </div>
+<div class="amanah-confirm">
+<p>Konfirmasi pengiriman hadiah</p>
+<a id="wa-konfirmasi" href="#" target="_blank" class="amanah-wa"><i class="fa-brands fa-whatsapp"></i> KONFIRMASI VIA WHATSAPP</a>
+</div>
 
-    </div>
+<div class="amanah-bottom-ornament">✦ ✧ ✦</div>
+</div>
+</section>
 
-</section>  
-      <!-- =========================
-     FOOTER / PENUTUP
-========================= -->
+<div class="section-divider soft"></div>
+
+<section id="rsvp" class="halaman-doa px-6 py-24">
+<div class="doa-inner max-w-xl mx-auto reveal">
+<p class="doa-label">Doa & Ucapan</p>
+<h2 class="doa-title text-center">Kirim Doa</h2>
+<div class="doa-symbol text-center">✦</div>
+<p class="doa-opening text-center">“Doa yang tulus adalah hadiah yang tidak ternilai bagi kedua mempelai.”</p>
+
+<form id="form-ucapan" class="doa-form" onsubmit="kirimKeSheets(event)">
+<input id="nama" class="doa-input" type="text" placeholder="Nama Anda" required>
+<textarea id="ucapan" class="doa-textarea" placeholder="Tuliskan doa dan ucapan..." required></textarea>
+<select id="kehadiran" class="doa-select" required>
+<option value="">Konfirmasi Kehadiran</option>
+<option value="Hadir">Insya Allah, saya hadir</option>
+<option value="Tidak Hadir">Mohon maaf, saya tidak dapat hadir</option>
+<option value="Masih Ragu">Masih ragu</option>
+</select>
+<button id="btn-kirim" type="submit" class="doa-submit"><i class="fa-regular fa-paper-plane"></i> KIRIM UCAPAN</button>
+</form>
+
+<div class="doa-divider"><span>✦</span></div>
+<div class="doa-list-area">
+<p class="doa-list-label">Ucapan Dari Keluarga & Sahabat</p>
+<p id="jumlah-ucapan" class="jumlah-ucapan">0 Ucapan</p>
+<div id="daftar-ucapan" class="doa-list"></div>
+</div>
+
+<div class="doa-ending">
+<p class="doa-ending-arabic">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا</p>
+<p>“Ya Tuhan kami, anugerahkanlah kepada kami pasangan dan keturunan sebagai penyenang hati dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa.”</p>
+<span>QS. Al-Furqan : 74</span>
+</div>
+</div>
+</section>
 
 <footer class="sirfa-footer">
-
-    <div class="sirfa-footer-inner">
-
-        <!-- Ornamen pembuka -->
-        <div class="sirfa-footer-ornament">
-            <span></span>
-            ✦
-            <span></span>
-        </div>
-
-        <!-- Pesan penutup -->
-        <p class="sirfa-footer-label">
-            TERIMA KASIH
-        </p>
-
-        <h2 class="sirfa-footer-title">
-            Telah menjadi bagian<br>
-            dari kebahagiaan kami
-        </h2>
-
-        <p class="sirfa-footer-text">
-            Doa, kehadiran, dan segala kebaikan
-            yang diberikan menjadi bagian yang
-            berarti dalam perjalanan kami.
-        </p>
-
-        <!-- Nama pasangan -->
-        <div class="sirfa-footer-couple">
-            <span id="footer-wanita">Rara</span>
-            <b>&</b>
-            <span id="footer-pria">Adi</span>
-        </div>
-
-        <!-- Ornamen -->
-        <div class="sirfa-footer-line"></div>
-
-        <!-- Dibuat oleh -->
-        <p class="sirfa-footer-created">
-            DIGITAL INVITATION
-        </p>
-
-        <!-- SOCIAL MEDIA -->
-        <div class="sirfa-footer-social">
-
-            <a
-                href="https://wa.me/628875754371"
-                target="_blank"
-                aria-label="WhatsApp Sirfa.id">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-            <a
-                href="https://instagram.com/sirfa.id"
-                target="_blank"
-                aria-label="Instagram Sirfa.id">
-
-                <i class="fa-brands fa-instagram"></i>
-
-            </a>
-
-            <a
-                href="https://sirfa.id"
-                target="_blank"
-                aria-label="Website Sirfa.id">
-
-                <i class="fa-solid fa-link"></i>
-
-            </a>
-
-        </div>
-
-        <!-- LOGO SIRFA.ID -->
-        <a
-            href="https://sirfa.id"
-            target="_blank"
-            class="sirfa-footer-logo">
-
-            <img
-                src="logosirfa.png"
-                alt="Sirfa.id">
-
-        </a>
-
-        <!-- Copyright -->
-        <p class="sirfa-footer-copy">
-            © 2026 sirfa.id
-        </p>
-
-        <p class="sirfa-footer-small">
-            Invitation crafted with care
-        </p>
-
-    </div>
-
+<div class="sirfa-footer-inner">
+<div class="sirfa-footer-ornament"><span></span> ✦ <span></span></div>
+<p class="sirfa-footer-label">WALIMATUL 'URS</p>
+<h2 class="sirfa-footer-title">Barakallahu Lakuma</h2>
+<p class="sirfa-footer-text">Semoga Allah menjadikan pernikahan ini sebagai awal dari kehidupan yang penuh sakinah, mawaddah, dan rahmah.</p>
+<div class="sirfa-footer-couple"><span id="footer-pria">Hafizh</span><b>&</b><span id="footer-wanita">Hafizah</span></div>
+<div class="sirfa-footer-line"></div>
+<p class="sirfa-footer-created">Dibuat dengan penuh doa oleh</p>
+<div class="sirfa-footer-social">
+<a href="https://instagram.com/sirfa.id" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://youtube.com/@SirfaChannel" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+</div>
+<a href="#" class="sirfa-footer-logo"><img src="logosisirfa.png" alt="Sirfa.id"></a>
+<p class="sirfa-footer-copy">© 2026 SIRFA.ID • ALL RIGHTS RESERVED</p>
+<p class="sirfa-footer-small">Semoga menjadi amal kebaikan.</p>
+</div>
 </footer>
-     
-    </div>
 
-    <audio id="musik" loop><source id="musik-source" src="" type="audio/mpeg"></audio>
+</div>
+
+<audio id="musik" loop>
+<source id="musik-source" src="" type="audio/mpeg">
+</audio>
+  
+     
+    
 <script>
 
 window.onerror = function(pesan, file, baris){
