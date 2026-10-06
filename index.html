@@ -531,11 +531,25 @@ function muatUcapan(){fetch(scriptURL+"?tujuan="+encodeURIComponent(idUndangan))
 function escapeHTML(teks){return String(teks).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
   
 function ambilNamaTamu(){const params=new URLSearchParams(window.location.search);const nama=params.get('to');const target=document.getElementById('nama-tamu');if(nama&&target)target.innerText=decodeURIComponent(nama).replace(/\+/g,' ')}
-function bukaUndangan(){document.getElementById('halaman-sampul').style.display='none';document.getElementById('konten-utama').style.display='block';document.getElementById('nav-menu').classList.remove('hidden');document.getElementById('music-btn').classList.remove('hidden');audio.play().catch(()=>{});window.scrollTo(0,0);isAutoScrolling=true;setTimeout(autoScroll,2000)}
 function toggleMusik(){const btn=document.getElementById('music-btn'),icon=btn.querySelector('i');if(audio.paused){audio.play().catch(()=>{});icon.className='fa-solid fa-volume-high';btn.classList.add('spinning')}else{audio.pause();icon.className='fa-solid fa-volume-xmark';btn.classList.remove('spinning')}}
-function toggleAutoScroll(){isAutoScrolling=!isAutoScrolling;const icon=document.getElementById('scroll-icon'),button=document.getElementById('scroll-btn');if(isAutoScrolling){icon.classList.replace('fa-play','fa-pause');button.classList.add('auto-on');autoScroll()}else{icon.classList.replace('fa-pause','fa-play');button.classList.remove('auto-on')}}
-function autoScroll(){if(!isAutoScrolling)return;window.scrollBy(0,.6);if(window.innerHeight+window.pageYOffset<document.body.offsetHeight){requestAnimationFrame(autoScroll)}else{isAutoScrolling=false;document.getElementById('scroll-icon').classList.replace('fa-pause','fa-play');document.getElementById('scroll-btn').classList.remove('auto-on')}}
+let autoScrollFrame=null,autoScrollResumeTimer=null,userInteracting=false;
 
+function bukaUndangan(){document.getElementById('halaman-sampul').style.display='none';document.getElementById('konten-utama').style.display='block';document.getElementById('nav-menu').classList.remove('hidden');document.getElementById('music-btn').classList.remove('hidden');audio.play().catch(()=>{});window.scrollTo(0,0);isAutoScrolling=true;updateAutoScrollButton();setTimeout(autoScroll,2000)}
+
+function updateAutoScrollButton(){const icon=document.getElementById('scroll-icon'),button=document.getElementById('scroll-btn');if(isAutoScrolling){icon.classList.replace('fa-play','fa-pause');button.classList.add('auto-on')}else{icon.classList.replace('fa-pause','fa-play');button.classList.remove('auto-on')}}
+
+function toggleAutoScroll(){isAutoScrolling=!isAutoScrolling;if(!isAutoScrolling){if(autoScrollFrame)cancelAnimationFrame(autoScrollFrame);clearTimeout(autoScrollResumeTimer)}else{autoScroll();}updateAutoScrollButton()}
+
+function autoScroll(){if(!isAutoScrolling||userInteracting)return;window.scrollBy(0,.6);if(window.innerHeight+window.pageYOffset<document.documentElement.scrollHeight-2){autoScrollFrame=requestAnimationFrame(autoScroll)}else{isAutoScrolling=false;updateAutoScrollButton()}}
+
+function hentikanAutoSaatGeser(){if(!isAutoScrolling)return;userInteracting=true;if(autoScrollFrame)cancelAnimationFrame(autoScrollFrame);clearTimeout(autoScrollResumeTimer)}
+
+function lanjutkanAutoSetelahGeser(){if(!isAutoScrolling)return;clearTimeout(autoScrollResumeTimer);autoScrollResumeTimer=setTimeout(()=>{userInteracting=false;autoScroll()},1200)}
+
+window.addEventListener('touchstart',hentikanAutoSaatGeser,{passive:true});
+window.addEventListener('touchend',lanjutkanAutoSetelahGeser,{passive:true});
+window.addEventListener('touchcancel',lanjutkanAutoSetelahGeser,{passive:true});
+window.addEventListener('wheel',()=>{if(isAutoScrolling){hentikanAutoSaatGeser();lanjutkanAutoSetelahGeser()}},{passive:true});
 function mulaiCountdown(){const namaBulan={"Januari":0,"Februari":1,"Maret":2,"April":3,"Mei":4,"Juni":5,"Juli":6,"Agustus":7,"September":8,"Oktober":9,"November":10,"Desember":11,"January":0,"February":1,"March":2,"April":3,"May":4,"June":5,"July":6,"August":7,"September":8,"October":9,"November":10,"December":11};let teks=String(dataMempelai.tglCountdown).trim(),target;if(/^\d{1,2}\s+\w+\s+\d{4}/.test(teks)){const b=teks.split(/\s+/);target=new Date(Number(b[2]),namaBulan[b[1]],Number(b[0]),0,0,0).getTime()}else target=new Date(teks).getTime();const jamMenit=String(dataMempelai.jamCountdown||'').match(/^(\d{1,2}):(\d{2})$/);if(jamMenit&&!isNaN(target)){const d=new Date(target);d.setHours(Number(jamMenit[1]),Number(jamMenit[2]),0,0);target=d.getTime()}function update(){if(isNaN(target))return;const selisih=target-Date.now(),negatif=selisih<0,total=Math.floor(Math.abs(selisih)/1000),hari=Math.floor(total/86400),jam=Math.floor(total%86400/3600),menit=Math.floor(total%3600/60),detik=total%60;document.getElementById('days').innerText=(negatif?'−':'')+hari;document.getElementById('hours').innerText=(negatif?'−':'')+String(jam).padStart(2,'0');document.getElementById('minutes').innerText=(negatif?'−':'')+String(menit).padStart(2,'0');document.getElementById('seconds').innerText=(negatif?'−':'')+String(detik).padStart(2,'0')}update();setInterval(update,1000)}
   
 function scrollReveal(){const items=document.querySelectorAll('.reveal');if(!items.length)return;const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target)}})},{threshold:.12});items.forEach(item=>observer.observe(item))}
