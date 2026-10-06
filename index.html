@@ -61,7 +61,13 @@ body{font-family:'Montserrat',sans-serif;scroll-behavior:smooth;overflow-x:hidde
 #nav-menu #scroll-btn.auto-on i{color:#fffaf0!important}
 #nav-menu #scroll-btn:active{transform:scale(.93)!important}
 #nav-menu .mihrab-top-ornament{display:none!important}
-.section-divider.soft{height:55px}.section-divider.soft::before{background:linear-gradient(90deg,transparent,rgba(165,139,80,.28),transparent)}.section-divider.soft::after{width:24px;height:24px;font-size:8px}
+.section-divider.soft{height:0!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;overflow:hidden!important}
+.section-divider.soft:before,.section-divider.soft:after{display:none!important}
+.music-control{position:fixed!important;top:14px!important;right:14px!important;width:40px!important;height:40px!important;display:flex!important;align-items:center!important;justify-content:center!important;border-radius:50%!important;background:#123b35!important;color:#d1b16a!important;border:1px solid rgba(209,177,106,.65)!important;box-shadow:0 6px 18px rgba(0,0,0,.28)!important;z-index:10000!important;cursor:pointer!important;font-size:13px!important}
+.music-control.hidden{display:none!important}
+.music-control i{color:#d1b16a!important}
+.music-control.spinning i{animation:musicSpin 2s linear infinite}
+@keyframes musicSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .sirfa-footer{position:relative;overflow:hidden;padding:80px 24px 135px;text-align:center;background:#0b2b27;color:#f5f0e4;border-top:1px solid rgba(208,177,106,.25)}
 .sirfa-footer:before{content:"";position:absolute;inset:22px;border:1px solid rgba(208,177,106,.22);pointer-events:none}
 .sirfa-footer:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:300px;height:390px;border:1px solid rgba(208,177,106,.12);border-bottom:0;border-radius:150px 150px 0 0;pointer-events:none}
@@ -145,7 +151,13 @@ body{font-family:'Montserrat',sans-serif;scroll-behavior:smooth;overflow-x:hidde
 .amanah-wa{display:inline-flex;align-items:center;gap:7px;padding:11px 19px;border-radius:4px!important;background:linear-gradient(135deg,#b08a4a,#8e6b35)!important;color:#fffaf0!important;border:1px solid rgba(18,59,53,.15);font-size:7px;font-weight:600;letter-spacing:.12em;box-shadow:0 8px 20px rgba(18,59,53,.12)}
 .amanah-wa:active{transform:scale(.95)}
 .amanah-bottom-ornament{margin-top:47px;color:#b08a4a;font-size:11px;opacity:.7}
-.buku-adab-section{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 20%,rgba(165,139,80,.08),transparent 38%),#f0ecdf;color:#59634d}.buku-adab-inner{position:relative;z-index:2}.buku-adab-label{font-size:8px;letter-spacing:.3em;color:#a58b50;text-transform:uppercase;margin-bottom:7px}.buku-adab-heading{font-family:'Amiri',serif;font-size:36px;color:#59634d}
+.buku-adab-section{position:relative;overflow:hidden;background:#f5f0e4;color:#24312d;padding-top:75px!important;padding-bottom:90px!important}
+.buku-adab-section:before{content:"";position:absolute;inset:22px;border:1px solid rgba(176,138,74,.28);pointer-events:none}
+.buku-adab-section:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:300px;height:430px;border:1px solid rgba(176,138,74,.12);border-bottom:0;border-radius:150px 150px 0 0;pointer-events:none}
+.buku-adab-inner{position:relative;z-index:2}
+.buku-adab-label{font-size:8px!important;letter-spacing:.32em!important;color:#b08a4a!important;text-transform:uppercase;margin-bottom:9px}
+.buku-adab-heading{font-family:'Amiri',serif!important;font-size:38px!important;line-height:1.3;color:#123b35!important}
+.buku-adab-inner>p.text-\[10px\]{color:#777267!important}
 .book-wrapper{width:min(330px,88vw);height:430px;margin:30px auto 0;position:relative;perspective:1800px;touch-action:pan-y}
 .book-shadow{position:absolute;left:5%;right:5%;bottom:-14px;height:30px;background:rgba(0,0,0,.22);filter:blur(15px);border-radius:50%}
 .book{position:relative;width:100%;height:100%;transform-style:preserve-3d}
@@ -161,7 +173,13 @@ body{font-family:'Montserrat',sans-serif;scroll-behavior:smooth;overflow-x:hidde
 .book-icon{width:58px;height:58px;margin:0 auto 21px;border:1px solid rgba(176,138,74,.55);border-radius:5px!important;display:flex;align-items:center;justify-content:center;color:#b08a4a;font-size:17px;position:relative;transform:rotate(45deg)}
 .book-icon i{transform:rotate(-45deg)}
 .book-icon:before{content:"";position:absolute;width:42px;height:42px;border:1px solid rgba(176,138,74,.25);transform:rotate(0)}
-.book-cover{background:radial-gradient(circle at 50% 30%,rgba(255,255,255,.08),transparent 40%),#59634d;color:#f7f3e8;border-color:rgba(165,139,80,.55);box-shadow:0 12px 30px rgba(60,65,48,.22)}.book-cover::before{inset:15px;border-color:rgba(220,196,130,.35)}.book-cover-inner{position:relative;z-index:2;text-align:center}.book-cover-arabic{font-family:'Amiri',serif;font-size:25px;color:#e1cc91;margin-bottom:25px}.book-cover-title{font-family:'Amiri',serif;font-size:31px;line-height:1.5;color:#fffdf5}.book-cover-subtitle{margin-top:16px;font-family:'Amiri',serif;font-size:16px;color:#e1d7bd;line-height:1.8}.book-cover-line{width:60px;height:1px;background:#c7ad6d;margin:18px auto}.book-cover-symbol{color:#d7bd7c;font-size:16px}.book-hint{margin-top:22px;font-size:8px;letter-spacing:.2em;color:#a58b50;text-transform:uppercase;animation:bookHint 2s ease-in-out infinite}.book-closing{margin-top:25px;font-family:'Amiri',serif;font-size:19px;color:#59634d;line-height:1.8}.book-closing-arabic{font-size:24px;color:#a58b50;margin-bottom:8px}
+.book-cover{background:radial-gradient(circle at 50% 25%,rgba(209,177,106,.12),transparent 42%),linear-gradient(145deg,#0b2b27,#123b35)!important;color:#f5f0e4!important;border-color:rgba(209,177,106,.65)!important;box-shadow:0 15px 35px rgba(0,0,0,.28)!important}
+.book-cover:before{border-color:rgba(209,177,106,.35)!important}
+.book-cover-arabic{font-family:'Amiri',serif!important;color:#e3ca8b!important}
+.book-cover-title{font-family:'Cormorant Garamond',serif!important;color:#f5f0e4!important}
+.book-cover-subtitle{font-family:'Amiri',serif!important;color:rgba(245,240,228,.68)!important}
+.book-cover-line{background:#d1b16a!important}
+.book-cover-symbol{color:#d1b16a!important}
 @keyframes bookHint{0%,100%{opacity:.45;transform:translateX(0)}50%{opacity:1;transform:translateX(5px)}}
 .maps-section{position:relative;overflow:hidden;background:#0b2b27;color:#f5f0e4;padding-top:75px!important;padding-bottom:90px!important}
 .maps-section:before{content:"";position:absolute;inset:22px;border:1px solid rgba(208,177,106,.22);pointer-events:none}
