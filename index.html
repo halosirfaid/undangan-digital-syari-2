@@ -60,16 +60,27 @@ body{font-family:'Montserrat',sans-serif;scroll-behavior:smooth;overflow-x:hidde
 #nav-menu #scroll-btn:active{transform:scale(.94)!important}
 #nav-menu .mihrab-top-ornament{position:absolute;left:50%;top:-8px;transform:translateX(-50%);width:24px;height:10px;border:1px solid rgba(183,155,101,.30);border-bottom:none;border-radius:20px 20px 0 0;z-index:2;pointer-events:none}
 .section-divider.soft{height:55px}.section-divider.soft::before{background:linear-gradient(90deg,transparent,rgba(165,139,80,.28),transparent)}.section-divider.soft::after{width:24px;height:24px;font-size:8px}
-.sirfa-footer{position:relative;overflow:hidden;padding:75px 24px 130px;text-align:center;background:radial-gradient(circle at 50% 15%,rgba(165,139,80,.10),transparent 40%),#ebe5d5;color:#59634d;border-top:1px solid rgba(165,139,80,.15)}
-.sirfa-footer::before,.halaman-doa::before,.halaman-amanah::before,.buku-adab-section::before,.acara-section::before,.perjalanan-section::before,.islamic-section::before,.cover-pattern{content:"";position:absolute;inset:0;opacity:.025;background-image:linear-gradient(30deg,#5d644e 12%,transparent 12.5%,transparent 87%,#5d644e 87.5%,#5d644e),linear-gradient(150deg,#5d644e 12%,transparent 12.5%,transparent 87%,#5d644e 87.5%,#5d644e);background-size:30px 52px;pointer-events:none}
+.sirfa-footer{position:relative;overflow:hidden;padding:80px 24px 135px;text-align:center;background:#0b2b27;color:#f5f0e4;border-top:1px solid rgba(208,177,106,.25)}
+.sirfa-footer:before{content:"";position:absolute;inset:22px;border:1px solid rgba(208,177,106,.22);pointer-events:none}
+.sirfa-footer:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:300px;height:390px;border:1px solid rgba(208,177,106,.12);border-bottom:0;border-radius:150px 150px 0 0;pointer-events:none}
 .sirfa-footer-inner{position:relative;z-index:2;max-width:350px;margin:auto}
-.sirfa-footer-ornament{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:25px;color:#a58b50;font-size:10px}.sirfa-footer-ornament span{width:45px;height:1px;background:#a58b50;opacity:.35}
-.sirfa-footer-label{font-size:7px;letter-spacing:.38em;color:#a58b50;margin-bottom:12px}.sirfa-footer-title{font-family:'Amiri',serif;font-size:27px;line-height:1.6;color:#59634d}.sirfa-footer-text{max-width:280px;margin:15px auto 0;font-size:9px;line-height:1.9;color:#77745f}
-.sirfa-footer-couple{margin-top:28px;display:flex;justify-content:center;align-items:center;gap:10px;font-family:'Amiri',serif;font-size:22px;color:#59634d}.sirfa-footer-couple b{font-size:13px;color:#a58b50;font-weight:normal}
-.sirfa-footer-line{width:55px;height:1px;margin:28px auto;background:#a58b50;opacity:.4}.sirfa-footer-created{font-size:7px;letter-spacing:.3em;color:#a58b50;margin-bottom:15px}
-.sirfa-footer-social{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:22px}.sirfa-footer-social a{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid rgba(165,139,80,.3);color:#59634d;background:rgba(255,255,255,.35);transition:.25s ease}.sirfa-footer-social a:active{transform:scale(.9)}
-.sirfa-footer-logo{display:inline-block;margin-top:2px}.sirfa-footer-logo img{width:105px;height:auto;display:block;margin:auto;opacity:.82;transition:.25s ease}.sirfa-footer-logo:active img{transform:scale(.95)}
-.sirfa-footer-copy{margin-top:22px;padding-top:15px;border-top:1px solid rgba(165,139,80,.15);font-size:7px;letter-spacing:.18em;color:#aaa58f;text-transform:uppercase}.sirfa-footer-small{margin-top:7px;font-size:7px;color:#aaa58f;font-style:italic}
+.sirfa-footer-ornament{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:26px;color:#d1b16a;font-size:10px}
+.sirfa-footer-ornament span{width:45px;height:1px;background:#d1b16a;opacity:.45}
+.sirfa-footer-label{font-size:7px;letter-spacing:.38em;color:#d1b16a;margin-bottom:12px}
+.sirfa-footer-title{font-family:'Amiri',serif!important;font-size:29px!important;line-height:1.6;color:#f5f0e4!important}
+.sirfa-footer-text{max-width:280px;margin:16px auto 0;font-size:9px;line-height:1.9;color:rgba(245,240,228,.65)}
+.sirfa-footer-couple{margin-top:29px;display:flex;justify-content:center;align-items:center;gap:12px;font-family:'Cormorant Garamond',serif!important;font-size:25px!important;font-weight:600;color:#f5f0e4}
+.sirfa-footer-couple b{font-size:13px;color:#d1b16a;font-weight:normal}
+.sirfa-footer-line{width:60px;height:1px;margin:29px auto;background:linear-gradient(90deg,transparent,#d1b16a,transparent);opacity:.75}
+.sirfa-footer-created{font-size:7px;letter-spacing:.3em;color:#d1b16a;margin-bottom:15px}
+.sirfa-footer-social{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:22px}
+.sirfa-footer-social a{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:4px!important;border:1px solid rgba(208,177,106,.4);color:#d1b16a!important;background:rgba(245,240,228,.04);transition:.25s ease}
+.sirfa-footer-social a:active{transform:scale(.9)}
+.sirfa-footer-logo{display:inline-block;margin-top:2px}
+.sirfa-footer-logo img{width:105px;height:auto;display:block;margin:auto;opacity:.78;filter:grayscale(1) brightness(0) invert(1);transition:.25s ease}
+.sirfa-footer-logo:active img{transform:scale(.95)}
+.sirfa-footer-copy{margin-top:23px;padding-top:15px;border-top:1px solid rgba(208,177,106,.15);font-size:7px;letter-spacing:.18em;color:rgba(245,240,228,.38);text-transform:uppercase}
+.sirfa-footer-small{margin-top:7px;font-size:7px;color:rgba(245,240,228,.38);font-style:italic}
 .halaman-doa{position:relative;overflow:hidden;background:#0b2b27;color:#f5f0e4;padding-top:75px!important;padding-bottom:90px!important}
 .halaman-doa:before{content:"";position:absolute;inset:22px;border:1px solid rgba(208,177,106,.22);pointer-events:none}
 .halaman-doa:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:310px;height:450px;border:1px solid rgba(208,177,106,.12);border-bottom:0;border-radius:155px 155px 0 0;pointer-events:none}
